@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <div class="header">
+                <h2>Total Records: <span id="totalRecords">0</span></h2>
+                <button id="addCardBtn">Add Card Record</button>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search by ID, Name, etc." />
+                <button>Search</button>
+            </div>
+            
+            <div class="card-records" id="cardRecords">
+                <!-- Cards will be added dynamically here -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal for adding or editing a card -->
+    <div id="addCardModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Add New Card Record</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <label for="department">Department:</label>
+            <input type="text" id="department" required>
+            <label for="role">Role:</label>
+            <input type="text" id="role" required>
+            <label for="expiration">Expiration Date:</label>
+            <input type="datetime-local" id="expiration" required>
+            <button id="saveCardBtn">Save</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
